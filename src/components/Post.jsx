@@ -7,6 +7,7 @@ export default function Post(props) {
     const [favorite, setFavorite] = useState(false)
     const [like, setLike] = useState(false)
     const [likeNumber, setlikeNumber] = useState(initialLikeNumber)
+    const [likeAnimation, setLikeAnimation] = useState(false)
 
     function likePost() {
         if (like === false) {
@@ -22,7 +23,12 @@ export default function Post(props) {
             setLike(true)
             setlikeNumber(likeNumber + 1)
         }
+        setLikeAnimation(true)
+        setTimeout(() => {
+            setLikeAnimation(false)
+        }, 500);
     }
+
     function favoritePost() {
         setFavorite(!favorite)
     }
@@ -40,8 +46,9 @@ export default function Post(props) {
             </div>
 
             <div className="conteudo">
-                <img data-test="post-image" onClick={likeImage} 
+                <img data-test="post-image" onDoubleClick={likeImage} 
                 src={`assets/img/${imagePost}.svg`} alt={imagePost}/>
+                <ion-icon class={`heart ${likeAnimation? 'like-heart' : ''}`} name="heart"></ion-icon>
             </div>
 
             <div className="fundo">
