@@ -6,31 +6,31 @@ import React from "react";
 export default function Sidebar() {
 
   function changingUsername() {
-    let usernamePrompt = prompt("Altere seu nome:")
+    const usernamePrompt = prompt("Altere seu nome:");
     if (usernamePrompt !== '') {
-      setUsernameWritten(usernamePrompt)
+      setUsernameWritten(usernamePrompt);
     } else {
-      alert("Tente escrever algo da próxima vez :)")
+      alert("Tente escrever algo da próxima vez :)");
     }
   }
 
   function changingImage() {
-    let imagePrompt = prompt("Ponha o link para sua nova imagem de perfil:")
+    const imagePrompt = prompt("Ponha o link para sua nova imagem de perfil:");
     if (imagePrompt !== '') {
-      setNewImage(imagePrompt)
+      setNewImage(imagePrompt);
     } else {
-      alert("Tente escrever algo da próxima vez :)")
+      alert("Tente escrever algo da próxima vez :)");
     }
   }
 
-  const [usernameWritten, setUsernameWritten] = useState("catanacomics")
+  const [usernameWritten, setUsernameWritten] = useState("catanacomics");
 
-  const [newImage, setNewImage] = useState("assets/img/catanacomics.svg")
+  const [newImage, setNewImage] = useState("assets/img/catanacomics.svg");
 
     return (
         <div className="sidebar">
-            <Usuarios 
-            eventUsername={changingUsername} 
+            <Usuarios
+            eventUsername={changingUsername}
             username = {usernameWritten}
             eventImage={changingImage}
             image = {newImage}
@@ -45,5 +45,5 @@ export default function Sidebar() {
           © 2021 INSTAGRAM DO FACEBOOK
         </div>
         </div>
-    )
+    );
 }

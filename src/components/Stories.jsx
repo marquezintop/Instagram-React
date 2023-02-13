@@ -1,7 +1,7 @@
 import Story from "./Story";
 
 export default function Stories() {
-    const usernameStories = ['9gag', 'meowed', 'barked', 'nathanwpylestrangeplanet', 
+    const usernameStories = ['9gag', 'meowed', 'barked', 'nathanwpylestrangeplanet',
     'wawawicomics', 'respondeai', 'filomoderna', 'memeriagourmet'];
     return (
         <div className="stories">
@@ -9,5 +9,5 @@ export default function Stories() {
                 <Story usernameStory = {item}/>
             ))}
         </div>
-    )
+    );
 }

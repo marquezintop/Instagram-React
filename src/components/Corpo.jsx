@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 export default function Corpo() {
     return (
         <>
-        <div className="corpo">  
+        <div className="corpo">
             <div className="esquerda">
             <Stories />
             <Posts />
@@ -13,5 +13,5 @@ export default function Corpo() {
             <Sidebar />
         </div>
         </>
-    )
+    );
 }

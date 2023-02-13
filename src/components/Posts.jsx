@@ -1,18 +1,18 @@
-import Post from "./Post"
+import Post from "./Post";
 
 export default function Posts() {
 
     const objectPost = [
         {
-            usernamePost: "meowed", 
-            imagePost: "gato-telefone", 
-            usernameLike: "respondeai", 
+            usernamePost: "meowed",
+            imagePost: "gato-telefone",
+            usernameLike: "respondeai",
             initialLikeNumber: 101523
         },
         {
-            usernamePost: "barked", 
-            imagePost: "dog", 
-            usernameLike: "adorable_animals", 
+            usernamePost: "barked",
+            imagePost: "dog",
+            usernameLike: "adorable_animals",
             initialLikeNumber: 99159
         },
         {
@@ -21,7 +21,7 @@ export default function Posts() {
             usernameLike: "respondeai",
             initialLikeNumber: 101523
         }
-    ]
+    ];
 
     return (
         <div className="posts">
@@ -33,5 +33,5 @@ export default function Posts() {
             />
             ))}
         </div>
-    )
+    );
 }

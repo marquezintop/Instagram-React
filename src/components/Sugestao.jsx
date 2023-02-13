@@ -1,6 +1,6 @@
 export default function Sugestao(props) {
 
-    const {usernameSugestao} = props
+    const {usernameSugestao} = props;
 
     return (
         <>
@@ -16,5 +16,5 @@ export default function Sugestao(props) {
           <div class="seguir">Seguir</div>
         </div>
       </>
-    )
+    );
 }

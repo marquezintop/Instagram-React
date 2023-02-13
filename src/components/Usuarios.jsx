@@ -2,7 +2,7 @@ export default function Usuarios(props) {
 
     return (
         <div class="usuario">
-          <img data-test="profile-image" src={props.image} 
+          <img data-test="profile-image" src={props.image}
           alt="imagem de perfil" onClick={props.eventImage}/>
           <div class="texto">
             <span>
@@ -11,5 +11,5 @@ export default function Usuarios(props) {
             </span>
           </div>
         </div>
-    )
+    );
   }

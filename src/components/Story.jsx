@@ -1,5 +1,5 @@
 export default function Story(props) {
-    
+
     const {usernameStory} = props;
 
     return (
@@ -16,5 +16,5 @@ export default function Story(props) {
             <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
     </>
-    )
+    );
 }

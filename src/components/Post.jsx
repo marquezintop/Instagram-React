@@ -1,36 +1,36 @@
 import { useState } from "react";
 
 export default function Post(props) {
-    
-    const {usernamePost, imagePost, usernameLike, initialLikeNumber} = props
 
-    const [favorite, setFavorite] = useState(false)
-    const [like, setLike] = useState(false)
-    const [likeNumber, setlikeNumber] = useState(initialLikeNumber)
-    const [likeAnimation, setLikeAnimation] = useState(false)
+    const {usernamePost, imagePost, usernameLike, initialLikeNumber} = props;
+
+    const [favorite, setFavorite] = useState(false);
+    const [like, setLike] = useState(false);
+    const [likeNumber, setlikeNumber] = useState(initialLikeNumber);
+    const [likeAnimation, setLikeAnimation] = useState(false);
 
     function likePost() {
         if (like === false) {
-            setlikeNumber(likeNumber + 1)
+            setlikeNumber(likeNumber + 1);
         } else {
-            setlikeNumber(likeNumber - 1)
+            setlikeNumber(likeNumber - 1);
         }
-        setLike(!like)
+        setLike(!like);
     }
-    
+
     function likeImage() {
         if (like === false) {
-            setLike(true)
-            setlikeNumber(likeNumber + 1)
+            setLike(true);
+            setlikeNumber(likeNumber + 1);
         }
-        setLikeAnimation(true)
+        setLikeAnimation(true);
         setTimeout(() => {
             setLikeAnimation(false)
         }, 500);
     }
 
     function favoritePost() {
-        setFavorite(!favorite)
+        setFavorite(!favorite);
     }
 
     return (
@@ -83,5 +83,5 @@ export default function Post(props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
