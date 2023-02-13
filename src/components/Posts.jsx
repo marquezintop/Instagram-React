@@ -1,6 +1,6 @@
 import Post from "./Post"
 
-function Posts() {
+export default function Posts() {
 
     const objectPost = [
         {
@@ -35,5 +35,3 @@ function Posts() {
         </div>
     )
 }
-
-export default Posts;

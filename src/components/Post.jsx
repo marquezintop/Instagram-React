@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Post(props) {
+export default function Post(props) {
     
     const {usernamePost, imagePost, usernameLike, initialLikeNumber} = props
 
@@ -28,7 +28,7 @@ function Post(props) {
     }
 
     return (
-        <div className="post">
+        <div className="post" data-test="post">
             <div className="topo">
                 <div className="usuario">
                     <img src={`assets/img/${usernamePost}.svg`} />
@@ -40,7 +40,8 @@ function Post(props) {
             </div>
 
             <div className="conteudo">
-                <img onClick={likeImage} src={`assets/img/${imagePost}.svg`} alt={imagePost}/>
+                <img data-test="post-image" onClick={likeImage} 
+                src={`assets/img/${imagePost}.svg`} alt={imagePost}/>
             </div>
 
             <div className="fundo">
@@ -48,6 +49,7 @@ function Post(props) {
                     <div>
                         <ion-icon
                             onClick={likePost}
+                            data-test="like-post"
                             name={like ? "heart" : "heart-outline"}
                             class={like ? "like" : ""}
                             style={{color: `${like ? "red" : "black"}`}}
@@ -58,6 +60,7 @@ function Post(props) {
                     <div>
                         <ion-icon
                             onClick={favoritePost}
+                            data-test="save-post"
                             name={favorite ? "bookmark" : "bookmark-outline"}
                         >
                         </ion-icon>
@@ -67,12 +70,11 @@ function Post(props) {
                 <div className="curtidas">
                     <img src={`assets/img/${usernameLike}.svg`} />
                     <div className="texto">
-                        Curtido por <strong>{usernameLike}</strong> e <strong>outras {likeNumber} pessoas</strong>
+                        Curtido por <strong>{usernameLike}</strong> e <strong>outras 
+                        <span data-test="likes-number">{likeNumber}</span> pessoas</strong>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-
-export default Post;

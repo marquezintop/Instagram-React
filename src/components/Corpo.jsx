@@ -1,7 +1,8 @@
 import Stories from "./Stories";
 import Posts from "./Posts";
 import Sidebar from "./Sidebar";
-function Corpo() {
+
+export default function Corpo() {
     return (
         <>
         <div className="corpo">  
@@ -14,4 +15,3 @@ function Corpo() {
         </>
     )
 }
-export default Corpo;

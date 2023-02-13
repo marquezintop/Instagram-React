@@ -3,7 +3,7 @@ import Sugestoes from "./Sugestoes";
 import { useState } from "react";
 import React from "react";
 
-function Sidebar() {
+export default function Sidebar() {
 
   function changingUsername() {
     let usernamePrompt = prompt("Altere seu nome:")
@@ -47,5 +47,3 @@ function Sidebar() {
         </div>
     )
 }
-
-export default Sidebar;
