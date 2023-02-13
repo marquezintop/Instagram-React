@@ -25,7 +25,7 @@ export default function Post(props) {
         }
         setLikeAnimation(true);
         setTimeout(() => {
-            setLikeAnimation(false)
+            setLikeAnimation(false);
         }, 500);
     }
 
@@ -46,7 +46,7 @@ export default function Post(props) {
             </div>
 
             <div className="conteudo">
-                <img data-test="post-image" onDoubleClick={likeImage} 
+                <img data-test="post-image" onDoubleClick={likeImage}
                 src={`assets/img/${imagePost}.svg`} alt={imagePost}/>
                 <ion-icon class={`heart ${likeAnimation? 'like-heart' : ''}`} name="heart"></ion-icon>
             </div>
@@ -77,7 +77,7 @@ export default function Post(props) {
                 <div className="curtidas">
                     <img src={`assets/img/${usernameLike}.svg`} />
                     <div className="texto">
-                        Curtido por <strong>{usernameLike}</strong> e <strong>outras 
+                        Curtido por <strong>{usernameLike}</strong> e <strong>outras
                         <span data-test="likes-number">{likeNumber}</span> pessoas</strong>
                     </div>
                 </div>
