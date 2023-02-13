@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
   }
+  button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
   
   body {
     background-color: #FAFAFA;
@@ -189,6 +194,10 @@
   
   .post .fundo .acoes div:first-child ion-icon {
     margin-right: 6px;
+  }
+
+  .acoes button ion-icon {
+    font-size: 27px;
   }
   
   .post .fundo .curtidas {

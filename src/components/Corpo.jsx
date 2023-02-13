@@ -1,5 +1,6 @@
-import Stories from "./components/Stories";
-import Posts from "./components/Posts";
+import Stories from "./Stories";
+import Posts from "./Posts";
+import Sidebar from "./Sidebar";
 function Corpo() {
     return (
         <>
@@ -8,6 +9,7 @@ function Corpo() {
             <Stories />
             <Posts />
             </div>
+            <Sidebar />
         </div>
         </>
     )

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import Navbar from "./components/Navbar";
-import Corpo from "./Corpo";
+import Corpo from "./components/Corpo";
 
 function Html() {
     return (
